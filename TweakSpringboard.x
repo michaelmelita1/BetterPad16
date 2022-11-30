@@ -8,6 +8,6 @@
 %end
 %hook SBPlatformController
 -(long long)medusaCapabilities {
-	return 2;
+	return 3;
 }
 %end
