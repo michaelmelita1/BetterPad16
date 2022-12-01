@@ -19,6 +19,6 @@ extern "C" bool MGGetBoolAnswer(CFStringRef);
 %end
 %hook SBPlatformController
 -(long long)medusaCapabilities {
-	return 3;
+	return 2;
 }
 %end
