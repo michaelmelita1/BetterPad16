@@ -1,4 +1,4 @@
-#import "/Misc.h"
+#import "Misc.h"
 #import <substrate.h>
 #import <CoreFoundation/CoreFoundation.h>
 
