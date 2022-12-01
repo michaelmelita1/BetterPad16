@@ -1,10 +1,10 @@
-#import "Misc.h"
 #import <substrate.h>
-#import <CoreFoundation/CoreFoundation.h>
+#define k(key) CFEqual(string, CFSTR(key))
 
-extern "C" bool MGGetBoolAnswer(CFStringRef);
-%hookf(bool, MGGetBoolAnswer, CFStringRef key) {
-	if (CFStringEqual(key, CFSTR("8fyX2yEg28cYgJ10Yl+ueA")))
+extern "C" Boolean MGGetBoolAnswer(CFStringRef);
+%hookf(Boolean, MGGetBoolAnswer, CFStringRef string)
+{
+	if (k("nVh/gwNpy7Jv1NOk00CMrw"))
 		return YES;
 	return %orig;
 }
