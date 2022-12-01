@@ -4,7 +4,7 @@
 
 extern "C" bool MGGetBoolAnswer(CFStringRef);
 %hookf(bool, MGGetBoolAnswer, CFStringRef key) {
-	if (CFStringEqual(key, CFSTR("nVh/gwNpy7Jv1NOk00CMrw")))
+	if (CFStringEqual(key, CFSTR("8fyX2yEg28cYgJ10Yl+ueA")))
 		return YES;
 	return %orig;
 }
