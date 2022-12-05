@@ -1,13 +1,4 @@
-#import "../PSHeader/Misc.h"
-#import <substrate.h>
-#import <CoreFoundation/CoreFoundation.h>
 
-extern "C" bool MGGetBoolAnswer(CFStringRef);
-%hookf(bool, MGGetBoolAnswer, CFStringRef key) {
-	if (CFStringEqual(key, CFSTR("8fyX2yEg28cYgJ10Yl+ueA")))
-		return YES;
-	return %orig;
-}
 
 %hook SiriPresentationSpringBoardMainScreenViewController
 -(BOOL)shouldDismissForTapsOutsideContent {
@@ -21,4 +12,11 @@ extern "C" bool MGGetBoolAnswer(CFStringRef);
 -(long long)medusaCapabilities {
 	return 2;
 }
+%end
+%hook VKImageAnalyzer
+
++ (BOOL)deviceSupportsImageAnalysis {
+    return YES;
+}
+
 %end
